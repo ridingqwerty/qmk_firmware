@@ -4,6 +4,9 @@
 #include "version.h"
 #include "process_records.h"
 #include "wrappers.h"
+#ifdef COMBO_ENABLE
+#include "combos.h"
+#endif
 #ifdef TAP_DANCE_ENABLE
 #    include "tapdances.h"
 #endif

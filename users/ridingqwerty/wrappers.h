@@ -90,7 +90,7 @@
 
 #define ________________EDITOR_R1__________________        _______, _______, KC_INS,  _______, KC_PGUP
 #define ________________EDITOR_R2__________________        ___________VI_ARROWS______________, _______
-#define ________________EDITOR_R3__________________        KC_PGDN, _______, _______, _______, KC_BSLS
+#define ________________EDITOR_R3__________________        KC_PGDN, KC_MUTE, KC_VOLD, KC_VOLU, KC_BSLS
 
 
 #define ________________DEBUG_L1___________________        DEBUG,   _______, _______, RNGWORD, SARCASM

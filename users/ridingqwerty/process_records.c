@@ -418,6 +418,49 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false; break;
 
+    case KC_C:
+      if (record->event.pressed) {
+#if defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE)
+        user_mod_state = get_mods() & MOD_MASK_ALT;
+        if (user_mod_state) {
+          unregister_mods(MOD_BIT(KC_RALT));
+          send_unicode_hex_string("00A9");
+          set_mods(user_mod_state);
+          return false;
+        }
+#endif
+      }
+      break;
+
+
+    case KC_R:
+      if (record->event.pressed) {
+#if defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE)
+        user_mod_state = get_mods() & MOD_MASK_ALT;
+        if (user_mod_state) {
+          unregister_mods(MOD_BIT(KC_RALT));
+          send_unicode_hex_string("00AE");
+          set_mods(user_mod_state);
+          return false;
+        }
+#endif
+      }
+      break;
+
+    case KC_T:
+      if (record->event.pressed) {
+#if defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE)
+        user_mod_state = get_mods() & MOD_MASK_ALT;
+        if (user_mod_state) {
+          unregister_mods(MOD_BIT(KC_RALT));
+          send_unicode_hex_string("2122");
+          set_mods(user_mod_state);
+          return false;
+        }
+#endif
+      }
+      break;
+
     case TESTING:
       /*
       if (record->event.pressed) {
@@ -475,7 +518,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (get_mods() & MOD_BIT(KC_RALT)) {
           unregister_mods(MOD_BIT(KC_RALT));
           //send_unicode_hex_string("262D");
-	  tap_code(KC_BSPC);
+          tap_code(KC_BSPC);
           set_mods(MOD_BIT(KC_RALT));
           return false;
         }
