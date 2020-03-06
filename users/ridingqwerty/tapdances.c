@@ -29,5 +29,7 @@ void braces_reset (qk_tap_dance_state_t *state, void *user_data) {
 }
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_BRACES] = ACTION_TAP_DANCE_FN_ADVANCED (NULL, braces_finished, braces_reset)
+    //[TD_BRACES] = ACTION_TAP_DANCE_FN_ADVANCED (NULL, braces_finished, braces_reset)
+    [TD_BRACES] = ACTION_TAP_DANCE_FN_ADVANCED_TIME (NULL, braces_finished, braces_reset, 250)
 };
+

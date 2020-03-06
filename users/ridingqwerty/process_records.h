@@ -30,6 +30,7 @@ enum userspace_custom_keycodes {
     SARCASM,
     VPRWAVE,
     STRAYA,
+    L33T,
     SECRET0,
     SECRET1,
     SECRET2,
@@ -49,7 +50,8 @@ typedef union {
             spongebob : 1,
             uppercase : 1,
             australia : 1,
-            unusued   : 4;
+            l33tsp34k : 1,
+            unusued   : 3;
   };
   uint8_t all;
 } mode_config_t;

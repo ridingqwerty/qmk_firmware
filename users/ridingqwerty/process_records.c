@@ -29,6 +29,7 @@ mode_config_t mode = {.all = 0U};
 
 bool randword_seed  = false;
 uint8_t user_mod_state;
+uint8_t mod_state;
 uint16_t rand_key;
 uint16_t temp_keycode;
 uint32_t user_key_timer;
@@ -348,6 +349,37 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
   }
 
+  if (mode.l33tsp34k) {
+    switch(temp_keycode) {
+      case KC_A:
+        if (record->event.pressed) {
+          tap_code(KC_4);
+        }
+        return false;
+
+      case KC_E:
+        if (record->event.pressed) {
+          tap_code(KC_3);
+        }
+        return false;
+
+      case KC_I:
+        if (record->event.pressed) {
+          tap_code(KC_1);
+        }
+        return false;
+
+      case KC_O:
+        if (record->event.pressed) {
+          tap_code(KC_0);
+        }
+        return false;
+
+      //default:
+        //return true;
+    }
+  }
+
   switch(keycode) {
 
     case VERSION:
@@ -490,6 +522,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       break;
 
+    /*
+    case KC_SCLN:
+      if (record->event.pressed) {
+        mod_state = get_mods();                                 // save mod state for testing and later restoration
+        if (mod_state & MOD_MASK_SHIFT) {                       // if shift is held
+          unregister_mods(MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)); // unregister both mods
+          tap_code(KC_SCLN);                                    // send ";" unmolested
+          set_mods(mod_state);                                  // re-register mod state
+          return false;                                         // done processing
+        }
+        else {                                                  // else, if shift isn't held
+          tap_code16(KC_COLN);                                  // send shift+";"
+          return false;
+        }
+      }
+      break;
+    */
+
     case SEED:
       if (record->event.pressed) {
         srand(timer_read32());
@@ -513,6 +563,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (!(mode.australia ^= 1)) { mode.all = 0U; };
       }
       break;
+
+    case L33T:
+      if (record->event.pressed) {
+        if (!(mode.l33tsp34k ^= 1)) { mode.all = 0U; };
+      }
+      break;
+
     default:
       if (record->event.pressed && record->event.key.col == 4 && record->event.key.row == 1) {
         if (get_mods() & MOD_BIT(KC_RALT)) {
