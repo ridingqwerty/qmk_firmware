@@ -1,0 +1,29 @@
+1. create separate processing for meme modes? australia, spongebob, etc.
+2. refactor each meme processing section
+   - wrap all switch cases in a single event.pressed block?
+   - create lookup table for each translation mode? (australia, vaporwave(?))
+
+
+CURSIVE MODE
+
+𝒜 ℬ 𝒞 𝒟 ℰ ℱ 𝒢 ℋ ℐ 𝒥 𝒦 ℒ ℳ 𝒩 𝒪 𝒫 𝒬 ℛ 𝒮 𝒯 𝒰 𝒱 𝒲 𝒳 𝒴 𝒵 (uppercase) [1d49c - 1d4b5]
+𝒶 𝒷 𝒸 𝒹 ℯ 𝒻 ℊ 𝒽 𝒾 𝒿 𝓀 𝓁 𝓂 𝓃 ℴ 𝓅 𝓆 𝓇 𝓈 𝓉 𝓊 𝓋 𝓌 𝓍 𝓎 𝓏 (lowercase) [1d4b6 - 1d4cf] diff=25, good
+
+//wip
+    case KC_A ... KC_Z:
+      if (record->event.pressed) {
+#if defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE)
+        user_mod_state = get_mods() & MOD_MASK_ALT;
+        if (user_mod_state) {
+          unregister_mods(MOD_BIT(KC_RALT));
+          send_unicode_hex_string("00AE");
+          set_mods(user_mod_state);
+          return false;
+        }
+#endif
+      }
+      break;
+
+// fraktur
+𝔄 𝔅 ℭ 𝔇 𝔈 𝔉 𝔊 ℌ ℑ 𝔍 𝔎 𝔏 𝔐 𝔑 𝔒 𝔓 𝔔 ℜ 𝔖 𝔗 𝔘 𝔙 𝔚 𝔛 𝔜 ℨ (uppercase) [1d504 - 1d51d]
+𝔞 𝔟 𝔠 𝔡 𝔢 𝔣 𝔤 𝔥 𝔦 𝔧 𝔨 𝔩 𝔪 𝔫 𝔬 𝔭 𝔮 𝔯 𝔰 𝔱 𝔲 𝔳 𝔴 𝔵 𝔶 𝔷 (lowercase) [1d51e - 1d537]
