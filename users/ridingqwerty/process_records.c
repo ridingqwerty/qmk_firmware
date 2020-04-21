@@ -430,7 +430,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case RG_QUOT:
       if (record->event.pressed) {
 #if defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE)
-        user_mod_state = get_mods() & MOD_MASK_ALT;
+        //user_mod_state = get_mods() & MOD_MASK_ALT;
+        user_mod_state = get_mods() & MOD_BIT(KC_RALT);
         if (user_mod_state) {
           unregister_mods(MOD_BIT(KC_RALT));
           send_unicode_hex_string("00B0");
@@ -453,7 +454,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case KC_C:
       if (record->event.pressed) {
 #if defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE)
-        user_mod_state = get_mods() & MOD_MASK_ALT;
+        //user_mod_state = get_mods() & MOD_MASK_ALT;
+        user_mod_state = get_mods() & MOD_BIT(KC_RALT);
         if (user_mod_state) {
           unregister_mods(MOD_BIT(KC_RALT));
           send_unicode_hex_string("00A9");
@@ -468,7 +470,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case KC_R:
       if (record->event.pressed) {
 #if defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE)
-        user_mod_state = get_mods() & MOD_MASK_ALT;
+        //user_mod_state = get_mods() & MOD_MASK_ALT;
+        user_mod_state = get_mods() & MOD_BIT(KC_RALT);
         if (user_mod_state) {
           unregister_mods(MOD_BIT(KC_RALT));
           send_unicode_hex_string("00AE");
@@ -482,7 +485,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case KC_T:
       if (record->event.pressed) {
 #if defined(UNICODE_ENABLE) || defined(UNICODEMAP_ENABLE)
-        user_mod_state = get_mods() & MOD_MASK_ALT;
+        //user_mod_state = get_mods() & MOD_MASK_ALT;
+        user_mod_state = get_mods() & MOD_BIT(KC_RALT);
         if (user_mod_state) {
           unregister_mods(MOD_BIT(KC_RALT));
           send_unicode_hex_string("2122");
