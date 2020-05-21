@@ -137,20 +137,20 @@
 #define ________________CYRLC_R3___________________        EN,      EM,      YU,      SCHA,    EH
 #define ________________CYRLC_R4___________________        SM(SPC), IO,      HARD,    ZHE,     RC(ENT)
 
-// Hiragana
-#define ________________JIS1_R1____________________        JTA,     JTE,     JI,      JSU,     JKA
-#define ________________JIS1_R2____________________        JTI,     JTO,     JSI,     JHA,     JKI
-#define ________________JIS1_R3____________________        JMI,     JMO,     KC_COMM, KC_DOT,  MO(_HIRA2)
-#define ________________JIS1_L1____________________        JN,      JNA,     JNI,     JRA,     JSE
-#define ________________JIS1_L2____________________        JKU,     JMA,     JNO,     JRI,     JRE
+// Hiragana -- currently a little wack
+#define ________________JIS1_L1____________________        JTA,     JTE,     JI,      JSU,     JKA
+#define ________________JIS1_L2____________________        JTI,     JTO,     JSI,     JHA,     JKI
 #define ________________JIS1_L3____________________        JTU,     JSA,     JSO,     JHI,     JKO
+#define ________________JIS1_R1____________________        JN,      JNA,     JNI,     JRA,     JSE
+#define ________________JIS1_R2____________________        JKU,     JMA,     JNO,     JRI,     JRE
+#define ________________JIS1_R3____________________        JMI,     JMO,     JNE,     JRU,     MO(_HIRA2)
 
-#define ________________JIS2_R1____________________        JRO,     JWA,     JNU,     JHU,     JA
-#define ________________JIS2_R2____________________        JYO,     JHO,     JHE,     JMU,     JVV
-#define ________________JIS2_R3____________________        JRU,     JME,     KC_COMM, KC_DOT,  _______
-#define ________________JIS2_L1____________________        JU,      JE,      JO,      JYA,     JYU
-#define ________________JIS2_L2____________________        JSV,     JKE,     JMI,     JMO,     JNE
+#define ________________JIS2_L1____________________        JNU,     NHU,     JA,      JU,      JE
+#define ________________JIS2_L2____________________        JRO,     __________________________________
 #define ________________JIS2_L3____________________        JTU,     JSA,     JSO,     JHI,     JKO
+#define ________________JIS2_R1____________________        JO,      JYA,     JYU,     JYO,     JWA
+#define ________________JIS2_R2____________________        JHO,     JHE,     JVV,     JSV,     JMU
+#define ________________JIS2_R3____________________        _______, JME,     KC_COMM, KC_DOT,  _______
 
 #endif
 // clang-format on
