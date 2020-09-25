@@ -10,6 +10,7 @@ UNICODEMAP_ENABLE = yes
 MOUSEKEY_ENABLE   = no
 TAP_DANCE_ENABLE  = yes
 AUTO_SHIFT_ENABLE = no
+LEADER_ENABLE     = yes
 
 ifneq ("$(wildcard $(USER_PATH)/secrets.c)","")
   SRC += secrets.c

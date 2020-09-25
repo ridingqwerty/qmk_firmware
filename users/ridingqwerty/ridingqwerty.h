@@ -62,3 +62,25 @@ void matrix_init_keymap(void);
 void matrix_scan_keymap(void);
 void keyboard_post_init_keymap(void);
 layer_state_t layer_state_set_keymap(layer_state_t state);
+
+// clang-format off
+typedef union {
+  struct {
+    uint8_t aesthetic : 1,
+            spongebob : 1,
+            uppercase : 1,
+            australia : 1,
+            l33tsp34k : 1,
+            zalgotext : 1,
+            fancytext : 1,
+            unusued   : 1;
+  };
+  uint8_t all;
+} mode_config_t;
+// clang-format on
+
+extern mode_config_t mode;
+
+extern uint32_t rng_char_timer;
+extern bool randchar_mode;
+

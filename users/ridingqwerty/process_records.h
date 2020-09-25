@@ -25,12 +25,16 @@ enum userspace_custom_keycodes {
     RG_QUOT,
     TESTING,
     RNGWORD,
+    TOG_RNG,
     CCCV,
     SEED,
     SARCASM,
     VPRWAVE,
     STRAYA,
     L33T,
+    ZALGO,
+    FANCY,
+    NO_MODE,
     SECRET0,
     SECRET1,
     SECRET2,
@@ -43,6 +47,7 @@ enum userspace_custom_keycodes {
     NEW_SAFE_RANGE // start new keyboard-level declarations with NEW_SAFE_RANGE
 };
 
+/*
 // clang-format off
 typedef union {
   struct {
@@ -58,3 +63,4 @@ typedef union {
 // clang-format on
 
 extern mode_config_t mode;
+*/

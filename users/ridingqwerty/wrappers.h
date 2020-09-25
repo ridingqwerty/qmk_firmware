@@ -50,6 +50,7 @@
 #define ________________DVORAK_R2__________________        KC_D,    KC_H,    KC_T,    KC_N,    NM(S)
 #define ________________DVORAK_R3__________________        KC_B,    KC_M,    KC_W,    FK(V),   RS(Z)
 
+//#define ________________BOTTOM_L4__________________        LC(ESC), LG(TAB),  LA(LBRC), LS(RBRC), NM(BSPC)
 #define ________________BOTTOM_L4__________________        LC(ESC), LG(TAB),  LA(LBRC), LS(RBRC), NM(BSPC)
 #define ________________BOTTOM_R4__________________        SM(SPC), RS(MINS), RA(EQL),  RG_QUOT,  RC(ENT)
 
@@ -93,12 +94,12 @@
 #define ________________EDITOR_R3__________________        KC_PGDN, KC_MUTE, KC_VOLD, KC_VOLU, KC_BSLS
 
 
-#define ________________DEBUG_L1___________________        DEBUG,   _______, L33T,    RNGWORD, SARCASM
-#define ________________DEBUG_L2___________________        GREEK,   RUSSIAN, HIRAGAN, RUNES,   _______
-#define ________________DEBUG_L3___________________        _______, _______, _______, VERSION, _______
+#define ________________DEBUG_L1___________________        DEBUG,   TOG_RNG, L33T,    RNGWORD, SARCASM
+#define ________________DEBUG_L2___________________        GREEK,   RUSSIAN, HIRAGAN, RUNES,   FANCY
+#define ________________DEBUG_L3___________________        ZALGO,   MU_TOG,  NO_MODE, VERSION, _______
 
 #define ________________DEBUG_R1___________________        VPRWAVE, STRAYA,  _______, TESTING, _______
-#define ________________DEBUG_R2___________________        _______, _______, EEP_RST, RESET,   MAKE
+#define ________________DEBUG_R2___________________        _______, _______, EEP_RST, KC_LEAD, MAKE
 #define ________________DEBUG_R3___________________        QWERTY,  DVORAK,  COLEMAK, _______, _______
 
 
@@ -145,7 +146,7 @@
 #define ________________JIS1_R2____________________        JKU,     JMA,     JNO,     JRI,     JRE
 #define ________________JIS1_R3____________________        JMI,     JMO,     JNE,     JRU,     MO(_HIRA2)
 
-#define ________________JIS2_L1____________________        JNU,     NHU,     JA,      JU,      JE
+#define ________________JIS2_L1____________________        JNU,     JHU,     JA,      JU,      JE
 #define ________________JIS2_L2____________________        JRO,     __________________________________
 #define ________________JIS2_L3____________________        JTU,     JSA,     JSO,     JHI,     JKO
 #define ________________JIS2_R1____________________        JO,      JYA,     JYU,     JYO,     JWA

@@ -14,6 +14,11 @@
 #    define COMBO_TERM 85
 #endif
 
+#ifdef LEADER_ENABLE
+#    define LEADER_TIMEOUT 300
+#    define LEADER_PER_KEY_TIMING
+#endif
+
 // testing
 #define TAPPING_TERM_PER_KEY
 //#define IGNORE_MOD_TAP_INTERRUPT // rolling R3 "zxcv", etc...
