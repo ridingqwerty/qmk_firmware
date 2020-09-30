@@ -16,7 +16,7 @@ bool process_record_secrets(uint16_t keycode, keyrecord_t *record) {
 /*
 
 // inherited from ridingqwerty.h
-
+(outdated)
 typedef union {
     struct {
         uint8_t aesthetic : 1,
@@ -766,41 +766,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       break;
 
+    case VPRWAVE ... FANCY:
+      if (record->event.pressed) {
+        mode.all = 0U;
+        mode.all |= (1 << (keycode - VPRWAVE));
+      }
+      break;
+
+    /*
     case SARCASM:
       if (record->event.pressed) {
         if (!(mode.spongebob ^= 1)) { mode.all = 0U; };
       }
       break;
-
-    case VPRWAVE:
-      if (record->event.pressed) {
-        if (!(mode.aesthetic ^= 1)) { mode.all = 0U; };
-      }
-      break;
-
-    case STRAYA:
-      if (record->event.pressed) {
-        if (!(mode.australia ^= 1)) { mode.all = 0U; };
-      }
-      break;
-
-    case L33T:
-      if (record->event.pressed) {
-        if (!(mode.l33tsp34k ^= 1)) { mode.all = 0U; };
-      }
-      break;
-
-    case ZALGO:
-      if (record->event.pressed) {
-        if (!(mode.zalgotext ^= 1)) { mode.all = 0U; };
-      }
-      break;
-
-    case FANCY:
-      if (record->event.pressed) {
-        if (!(mode.fancytext ^= 1)) { mode.all = 0U; };
-      }
-      break;
+    */
 
     case NO_MODE:
       if (record->event.pressed) {

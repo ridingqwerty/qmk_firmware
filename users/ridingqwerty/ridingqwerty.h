@@ -68,11 +68,11 @@ typedef union {
   struct {
     uint8_t aesthetic : 1,
             spongebob : 1,
-            uppercase : 1,
             australia : 1,
             l33tsp34k : 1,
             zalgotext : 1,
             fancytext : 1,
+            uppercase : 1,
             unusued   : 1;
   };
   uint8_t all;

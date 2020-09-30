@@ -28,13 +28,15 @@ enum userspace_custom_keycodes {
     TOG_RNG,
     CCCV,
     SEED,
-    SARCASM,
+    // begin modes -- consider moving NOMODE to be the first
     VPRWAVE,
+    SARCASM,
     STRAYA,
     L33T,
     ZALGO,
     FANCY,
     NO_MODE,
+    // NO_MODE is last mode (for now)
     SECRET0,
     SECRET1,
     SECRET2,

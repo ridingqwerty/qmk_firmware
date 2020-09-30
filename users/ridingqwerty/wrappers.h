@@ -59,7 +59,9 @@
 #define ________________NUMROW_R1__________________        KC_6,    KC_7,    KC_8,    KC_9,    KC_0
 
 #define ________________NUMPAD_R1__________________        _______, KC_7,    KC_8,    KC_9,    KC_0
-#define ________________NUMPAD_R2__________________        _______, KC_4,    KC_5,    KC_6,    _______
+//#define ________________NUMPAD_R2__________________        _______, KC_4,    KC_5,    KC_6,    _______
+#define TGNUM TG(_NUMBER)
+#define ________________NUMPAD_R2__________________        TGNUM,   KC_4,    KC_5,    KC_6,    _______
 #define ________________NUMPAD_R3__________________        _______, KC_1,    KC_2,    KC_3,    KC_BSLS
 #define ________________NUMPAD_R4__________________        KC_0,    KC_0,    KC_DOT,  KC_3,    _______
 
@@ -98,7 +100,7 @@
 #define ________________DEBUG_L2___________________        GREEK,   RUSSIAN, HIRAGAN, RUNES,   FANCY
 #define ________________DEBUG_L3___________________        ZALGO,   MU_TOG,  NO_MODE, VERSION, _______
 
-#define ________________DEBUG_R1___________________        VPRWAVE, STRAYA,  _______, TESTING, _______
+#define ________________DEBUG_R1___________________        VPRWAVE, STRAYA,  _______, TESTING, RESET
 #define ________________DEBUG_R2___________________        _______, _______, EEP_RST, KC_LEAD, MAKE
 #define ________________DEBUG_R3___________________        QWERTY,  DVORAK,  COLEMAK, _______, _______
 
