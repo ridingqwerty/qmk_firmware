@@ -42,6 +42,7 @@ enum userspace_layers
     _FINAL
 };
 
+// modtap shortcuts
 #define LS(kc) MT(MOD_LSFT, KC_##kc)
 #define LC(kc) MT(MOD_LCTL, KC_##kc)
 #define LG(kc) MT(MOD_LGUI, KC_##kc)
@@ -51,6 +52,7 @@ enum userspace_layers
 #define RG(kc) MT(MOD_RGUI, KC_##kc)
 #define RA(kc) MT(MOD_RALT, KC_##kc)
 
+// layertap shortcuts
 #define ED(kc) LT(_EDITOR, KC_##kc)
 #define NM(kc) LT(_NUMBER, KC_##kc)
 #define SM(kc) LT(_SYMBOL, KC_##kc)

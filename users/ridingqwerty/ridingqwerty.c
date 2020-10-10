@@ -18,12 +18,6 @@ __attribute__((weak))
 void matrix_scan_keymap(void) {
 }
 
-/*
-void matrix_scan_user(void) {
-    // use for global event timers
-}
-*/
-
 bool     randchar_mode = false;
 uint32_t rng_char_timer = 0;
 
