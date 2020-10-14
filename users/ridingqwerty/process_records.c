@@ -107,9 +107,11 @@ bool process_record_glyph_replacement(uint16_t keycode, keyrecord_t *record, tra
     return process_record_keymap(keycode, record);
 }
 
+//DEFINE_UNICODE_RANGE_TRANSLATOR(unicode_range_translator_name, lower, upper, zero, one, space);
 DEFINE_UNICODE_RANGE_TRANSLATOR(unicode_range_translator_wide, 0xFF41, 0xFF21, 0xFF10, 0xFF11, 0x2003);
 DEFINE_UNICODE_RANGE_TRANSLATOR(unicode_range_translator_script, 0x1D4EA, 0x1D4D0, 0x1D7CE, 0x1D7C1, 0x2002);
 DEFINE_UNICODE_RANGE_TRANSLATOR(unicode_range_translator_boxes, 0x1F170, 0x1F170, '0', '1', 0x2002);
+DEFINE_UNICODE_RANGE_TRANSLATOR(unicode_range_translator_fraktur, 0x1D51E, 0x1D504, '0', '1', 0x2002);
 //DEFINE_UNICODE_RANGE_TRANSLATOR(unicode_range_translator_regional, 0x1F1E6, 0x1F1E6, '0', '1', 0x2003);
 
 
@@ -369,6 +371,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (mode.fancytext) {
     if (((KC_A <= temp_keycode) && (temp_keycode <= KC_0)) || temp_keycode == KC_SPACE) {
       return process_record_glyph_replacement(temp_keycode, record, unicode_range_translator_script);
+    }
+  }
+
+  if (mode.gothictxt) {
+    if (((KC_A <= temp_keycode) && (temp_keycode <= KC_0)) || temp_keycode == KC_SPACE) {
+      return process_record_glyph_replacement(temp_keycode, record, unicode_range_translator_fraktur);
     }
   }
 

@@ -97,8 +97,8 @@
 
 
 #define ________________DEBUG_L1___________________        DEBUG,   TOG_RNG, L33T,    RNGWORD, SARCASM
-#define ________________DEBUG_L2___________________        GREEK,   RUSSIAN, HIRAGAN, RUNES,   FANCY
-#define ________________DEBUG_L3___________________        ZALGO,   MU_TOG,  NO_MODE, VERSION, _______
+#define ________________DEBUG_L2___________________        GREEK,   RUSSIAN, HIRAGAN, RUNES,   GOTHIC
+#define ________________DEBUG_L3___________________        ZALGO,   MU_TOG,  NO_MODE, VERSION, FANCY
 
 #define ________________DEBUG_R1___________________        VPRWAVE, STRAYA,  _______, TESTING, RESET
 #define ________________DEBUG_R2___________________        _______, _______, EEP_RST, KC_LEAD, MAKE

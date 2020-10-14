@@ -4,12 +4,15 @@
 #include "version.h"
 #include "process_records.h"
 #include "wrappers.h"
+
 #ifdef COMBO_ENABLE
-#include "combos.h"
+#    include "combos.h"
 #endif
+
 #ifdef TAP_DANCE_ENABLE
 #    include "tapdances.h"
 #endif
+
 #if defined(UNICODEMAP_ENABLE) || defined(UNICODE_ENABLE)
 #    include "unicode.h"
 #endif
@@ -73,9 +76,9 @@ typedef union {
             australia : 1,
             l33tsp34k : 1,
             zalgotext : 1,
+            gothictxt : 1,
             fancytext : 1,
-            uppercase : 1,
-            unusued   : 1;
+            uppercase : 1;
   };
   uint8_t all;
 } mode_config_t;

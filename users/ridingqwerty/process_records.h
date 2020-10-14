@@ -34,6 +34,7 @@ enum userspace_custom_keycodes {
     STRAYA,
     L33T,
     ZALGO,
+    GOTHIC,
     FANCY,
     NO_MODE,
     // NO_MODE is last mode (for now)
