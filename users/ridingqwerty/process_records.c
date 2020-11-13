@@ -268,6 +268,12 @@ bool process_record_zalgo(uint16_t keycode, keyrecord_t *record) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef CONSOLE_ENABLE
   uprintf("KL: kc: %u, col: %u, row: %u, pressed: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed);
+  uprintf("MODS: ");
+  uprintf(get_mods() & MOD_MASK_CTRL ?"C":" " );
+  uprintf(get_mods() & MOD_MASK_SHIFT?"S":" " );
+  uprintf(get_mods() & MOD_MASK_ALT  ?"A":" " );
+  uprintf(get_mods() & MOD_MASK_GUI  ?"G":" " );
+  uprintf("\n");
 #endif
 
   temp_keycode = keycode;

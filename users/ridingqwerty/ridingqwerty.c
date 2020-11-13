@@ -83,6 +83,7 @@ void keyboard_post_init_user(void) {
     debug_matrix = true;
     //debug_keyboard=true;
     //debug_mouse=true;
+    uprintf("Post Init: Debug Enabled\n");
 #endif
 }
 
