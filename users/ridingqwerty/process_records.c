@@ -484,12 +484,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
 
     case TESTING:
+      /*
       if (record->event.pressed) {
         char* str = malloc(100);
         sprintf(str, "%c%d + %d = %d%c%c", 34, 1, 2, 3, 34, 10);
         send_string(str);
         free(str);
       }
+      */
       /*
       ;
       long unsigned int test_number = 12345;
