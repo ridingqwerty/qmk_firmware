@@ -568,6 +568,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       break;
 
+    case CM_Q:
+      if (record->event.pressed) {
+        register_code(KC_Q);
+      } else {
+        unregister_code(KC_Q);
+      }
+      return false;
+
+    case CM_W:
+      if (record->event.pressed) {
+        register_code(KC_W);
+      } else {
+        unregister_code(KC_W);
+      }
+      return false;
+
     default:
       if (record->event.pressed && record->event.key.col == 4 && record->event.key.row == 1) {
         if (get_mods() & MOD_BIT(KC_RALT)) {

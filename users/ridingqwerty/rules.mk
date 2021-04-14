@@ -2,7 +2,7 @@ SRC += ridingqwerty.c \
        process_records.c
 
 BOOTMAGIC_ENABLE  = lite
-COMBO_ENABLE      = no    # combos suck
+COMBO_ENABLE      = yes   # combos suck
 COMMAND_ENABLE    = no
 CONSOLE_ENABLE    = no    # change to "yes" to enable debugging (works with "sudo hid_listen" so far...)
 UNICODE_ENABLE    = no    # "yes" in Atreus default keymap, blocking UNICODEMAP_ENABLE

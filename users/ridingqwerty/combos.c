@@ -1,11 +1,13 @@
 #include "combos.h"
 
+const uint16_t PROGMEM x_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM caps_combo[] = {KC_O, KC_P, COMBO_END};
 const uint16_t PROGMEM tab_combo[] = {CCCV, TD_BRC, COMBO_END};
 const uint16_t PROGMEM build_combo[] = {KC_Q, KC_P, COMBO_END};
 //const uint16_t PROGMEM p_combo[] =  {LS(Z), KC_X, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
+  [COMBO_X] = COMBO(x_combo, KC_X),
   [COMBO_CAPS] = COMBO(caps_combo, KC_CAPS),
   //[COMBO_TAB] =  COMBO(tab_combo, KC_TAB),
   [COMBO_TAB] =  COMBO_ACTION(tab_combo),
@@ -17,6 +19,7 @@ combo_t key_combos[COMBO_COUNT] = {
 void process_combo_keymap(uint8_t combo_index, bool pressed) {
 }
 
+/*
 void process_combo_event(uint8_t combo_index, bool pressed) {
   switch(combo_index) {
     case COMBO_TAB:
@@ -32,6 +35,7 @@ void process_combo_event(uint8_t combo_index, bool pressed) {
     break;
   }
 }
+*/
 
 
 /*

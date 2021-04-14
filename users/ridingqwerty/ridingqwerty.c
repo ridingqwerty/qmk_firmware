@@ -95,6 +95,19 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 #ifdef CONSOLE_ENABLE
     uprintf("LAYER: %u\n", state);
 #endif
+
+#ifdef COMBO_ENABLE
+    //switch(get_highest_layer(state)) {
+    switch(get_highest_layer(state|default_layer_state)) {
+    case _COLEMAK:
+      combo_disable();
+      break;
+    default:
+      combo_enable();
+      break;
+    }
+#endif // COMBO_ENABLE
+
     return state;
 }
 

@@ -47,6 +47,9 @@ enum userspace_custom_keycodes {
     SECRET6,
     SECRET7,
     SECRET8,
+    // COMBO TESTING
+    CM_Q,
+    CM_W,
     NEW_SAFE_RANGE // start new keyboard-level declarations with NEW_SAFE_RANGE
 };
 
