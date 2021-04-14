@@ -1,9 +1,7 @@
-#include <stdio.h>
+//#include <stdio.h>
 #include <time.h>
 #include "ridingqwerty.h"
 #include "dict.h"
-
-char *s = "test string";
 
 __attribute__ ((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
