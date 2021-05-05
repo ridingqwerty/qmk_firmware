@@ -80,7 +80,7 @@ void keyboard_post_init_keymap(void) {}
 void keyboard_post_init_user(void) {
 #if defined(CONSOLE_ENABLE)
     debug_enable = true;
-    debug_matrix = true;
+    //debug_matrix = true;
     //debug_keyboard=true;
     //debug_mouse=true;
     uprintf("Post Init: Debug Enabled\n");
