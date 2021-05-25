@@ -38,7 +38,7 @@ enum userspace_layers
     _F_KEYS,
     _DEBUG,
     _SECRET,
-#if defined(MOUSEKEY_ENABLED)
+#if defined(MOUSEKEY_ENABLE)
     _MOUSE,
 #endif
     _MEDIA,
