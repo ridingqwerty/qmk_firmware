@@ -28,8 +28,8 @@
 #define ________________FNHOMEROW_L2_______________        C(KC_A), G(KC_S), A(KC_D), S(KC_F), KC_G
 #define ________________FNHOMEROW_R2_______________        KC_H,    S(KC_J), A(KC_K), G(KC_L), C(SCLN)
 
-#define ____THUMBS_R4___        ED(ESC), DB(TAB)
-#define _____BLANK_R4___        _______, _______
+#define ____THUMB_R4____        ED(ESC), DB(TAB)
+#define ____BLANK_R4____        _______, _______
 #define ________________        _______, _______
 
 
@@ -50,7 +50,6 @@
 #define ________________DVORAK_R2__________________        KC_D,    KC_H,    KC_T,    KC_N,    NM(S)
 #define ________________DVORAK_R3__________________        KC_B,    KC_M,    KC_W,    FK(V),   RS(Z)
 
-//#define ________________BOTTOM_L4__________________        LC(ESC), LG(TAB),  LA(LBRC), LS(RBRC), NM(BSPC)
 #define ________________BOTTOM_L4__________________        LC(ESC), LG(TAB),  LA(LBRC), LS(RBRC), NM(BSPC)
 #define ________________BOTTOM_R4__________________        SM(SPC), RS(MINS), RA(EQL),  RG_QUOT,  RC(ENT)
 
@@ -155,5 +154,5 @@
 #define ________________JIS2_R2____________________        JHO,     JHE,     JVV,     JSV,     JMU
 #define ________________JIS2_R3____________________        _______, JME,     KC_COMM, KC_DOT,  _______
 
-#endif
+#endif // UNICODEMAP_ENABLE
 // clang-format on

@@ -3,6 +3,9 @@
 #include "ridingqwerty.h"
 #include "dict.h"
 
+//testing
+#include <string.h>
+
 __attribute__ ((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
   return true;
@@ -28,6 +31,18 @@ typedef union {
 } mode_config_t;
 mode_config_t mode = {.all = 0U};
 */
+
+// Used in process_record_user(), a layer tap for a custom keycode.
+void custom_lt(char s[], keyrecord_t *record) {
+  static uint16_t lt_timer;
+  if (record->event.pressed) {
+    lt_timer = timer_read(); 
+  } else {
+    if (timer_elapsed(lt_timer) < 200) {
+      SEND_STRING(s);
+    }
+  }
+}
 
 void tap_code16_nomods(uint8_t kc) {
     uint8_t temp_mod = get_mods();
@@ -492,6 +507,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
 
     case TESTING:
+      ;
+      char s[2];
+      strcpy(s,"\"");
+      //SEND_STRING(s);
+      custom_lt(s,record);
       /*
       if (record->event.pressed) {
         char* str = malloc(100);

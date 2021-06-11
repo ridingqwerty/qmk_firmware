@@ -41,7 +41,6 @@ enum userspace_layers
 #if defined(MOUSEKEY_ENABLE)
     _MOUSE,
 #endif
-    _MEDIA,
     _FINAL
 };
 
