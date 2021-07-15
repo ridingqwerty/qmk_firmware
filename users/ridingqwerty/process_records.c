@@ -448,16 +448,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       break;
 
-    case KC_F:
-      if (record->event.pressed) {
-          if ( record->tap.count == 2) register_mods(MOD_BIT(KC_LSFT));
-	  register_code(keycode);
-      } else {
-	  unregister_code(keycode);
-          if ( record->tap.count == 2) unregister_mods(MOD_BIT(KC_LSFT));
-      }
-      return false; break;
-
     case TOG_RNG:
       if (randword_seed == false) {
         randword_seed = true;
